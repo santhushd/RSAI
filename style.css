@@ -399,6 +399,7 @@ header nav .container .menu li .dropdown li:hover a {
 }
 
 .column-sections .container .col .video-container {
+  margin-top: 10px;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
