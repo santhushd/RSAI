@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/01f74f74c3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header and navigation bar -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <h1 class="title">The 28th Pacific Conference of the RSAI</h1>
+          <div class="logos">
+            <img
+              src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/rsai.jpeg"
+              alt="RSAI"
+              class="logo"
+            />
+            <img
+              src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/prsc.png"
+              alt="PRSCO"
+              class="logo"
+            />
+          </div>
+          <button class="menu-button" onclick="ToggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="navigation">
+        <div class="container" id="navigationMenu">
+          <ul class="menu">
+            <li class="home">
+              <a href="javascript:void(0)">Home</a>
+              <button onclick="ToggleMenu()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Program</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Call for Papers</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Registration</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Venue</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Travel Info</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Organization/Info</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Item one</a></li>
+                <li><a href="javascript:void(0)">Item two</a></li>
+                <li><a href="javascript:void(0)">Item Three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Slideshow -->
+    <div class="slide-show">
+      <div class="image-box">
+        <img
+          src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/im3e.jpg"
+          alt="Slider-Image"
+        />
+      </div>
+      <button class="left"><i class="fa-solid fa-angle-left"></i></button>
+      <button class="right"><i class="fa-solid fa-angle-right"></i></button>
+      <div class="container">
+        <div class="card">
+          <h1>The 28th Pacific Conference of the RSAI (PROSCO 2024)</h1>
+          <hr />
+          <p>4-7 August, 2024</p>
+          <p>Daegu, South Korea</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column-sections">
+      <div class="container">
+        <div class="col">
+          <div class="row">
+            <h1 class="section-title">Notice</h1>
+            <button><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <hr class="main-line" />
+          <div class="row">
+            <p class="title">Sample Text</p>
+            <p class="date">2024-11-27</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <p class="title">Sample Text</p>
+            <p class="date">2024-11-27</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <p class="title">Sample Text</p>
+            <p class="date">2024-11-27</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <p class="title">Sample Text</p>
+            <p class="date">2024-11-27</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <p class="title">Sample Text</p>
+            <p class="date">2024-11-27</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <h1 class="section-title">Key Dates</h1>
+            <button><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <hr class="main-line" />
+          <div class="row">
+            <div class="month-date">
+              <p class="month">Mar</p>
+              <p class="date">31, 2024</p>
+            </div>
+            <p class="title">Sample Text</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <div class="month-date">
+              <p class="month">Mar</p>
+              <p class="date">31, 2024</p>
+            </div>
+            <p class="title">Sample Text</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <div class="month-date">
+              <p class="month">Mar</p>
+              <p class="date">31, 2024</p>
+            </div>
+            <p class="title">Sample Text</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <div class="month-date">
+              <p class="month">Mar</p>
+              <p class="date">31, 2024</p>
+            </div>
+            <p class="title">Sample Text</p>
+          </div>
+          <hr class="sub-line" />
+          <div class="row">
+            <div class="month-date">
+              <p class="month">Mar</p>
+              <p class="date">31, 2024</p>
+            </div>
+            <p class="title">Sample Text</p>
+          </div>
+          <hr class="sub-line" />
+        </div>
+        <div class="col">
+          <div class="row">
+            <h1 class="section-title">Venue Information</h1>
+            <button><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <hr class="main-line" />
+          <div class="video">I am a video</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button blocks -->
+    <div class="button-blocks">
+      <div class="container">
+        <div class="col">
+          <div class="block">
+            <h1 class="section-title">Paper Submission (Abstract)</h1>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="block">
+            <h1 class="section-title">Registration</h1>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h1 class="section-title">Paper Submission (Full-Paper)</h1>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="block">
+            <h1 class="section-title">Program Book</h1>
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brands section -->
+    <div class="brands-section">
+      <div class="container">
+        <div class="grid">
+          <div class="cell">
+            <h1 class="title section-title">Hosted By</h1>
+            <div class="images">
+              <div class="image-box">
+                <img
+                  src="	https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/prsc.png"
+                  alt="BRAND"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="cell">
+            <h1 class="title section-title">Organized by</h1>
+            <div class="images">
+              <div class="image-box">
+                <img
+                  src="	https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/krsa.png"
+                  alt="BRAND"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <h1 class="title section-title">Co-hosted by</h1>
+            <div class="images">
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/dpi_kor1.jpg"
+                  alt="BRAND"
+                />
+              </div>
+
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/auri.png"
+                  alt="BRAND"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="cell">
+            <h1 class="title section-title">Co-organized by</h1>
+            <div class="images">
+              <div class="image-box">
+                <img
+                  src="	https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/image01.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="	https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/image02.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/krila_en.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/KICT_en.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/lh.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/main_co_org6.png"
+                  alt="BRAND"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/image05.png"
+                  alt="BRAND"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="cell">
+            <h1 class="title section-title">Co-organized by</h1>
+            <div class="images">
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/nrf.jpg"
+                  alt="BRAND"
+                />
+              </div>
+
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/04Basic_BS03_SigEng_jpg_01.jpg"
+                  alt="BRAND"
+                />
+              </div>
+
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/01.jpg"
+                  alt="BRAND"
+                />
+              </div>
+
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/hdr.png"
+                  alt="BRAND"
+                />
+              </div>
+
+              <div class="image-box">
+                <img
+                  src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/main/chimcking.png"
+                  alt="BRAND"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer>
+      <div class="container">
+        <h1>The 28th Pacific Conference of the RSAI</h1>
+        <p class="content">
+          Korean Regional Science Association<br />
+          Address : (06974 ) Bldg.303 #1328, 84, Heukseok-ro, Dongjak-gu,
+          Seoul,Republic of Korea<br />
+          사업자번호 : 116-82-03934 (대표: 박인권)<br />
+          E-Mail : prsco2024@krsa83.or.kr
+        </p>
+        <p class="copyright">
+          Copyright © Korean Regional Science Association, All rights reserved
+          Designed & Developed by
+          <a href="http://www.devzec.com/" target="_blank"
+            >Devzec Technologies</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
