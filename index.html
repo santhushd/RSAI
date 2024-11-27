@@ -29,7 +29,7 @@
               class="logo"
             />
           </div>
-          <button class="menu-button" onclick="ToggleMenu()">
+          <button class="menu-button" onclick="OpenMenu()">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -39,7 +39,7 @@
           <ul class="menu">
             <li class="home">
               <a href="javascript:void(0)">Home</a>
-              <button onclick="ToggleMenu()">
+              <button onclick="CloseMenu()">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </li>
@@ -202,7 +202,15 @@
             <button><i class="fa-solid fa-plus"></i></button>
           </div>
           <hr class="main-line" />
-          <div class="video">I am a video</div>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/AcNBb1Ok6Ak?si=4DsqKpEAd8PWJvp8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
         </div>
       </div>
     </div>

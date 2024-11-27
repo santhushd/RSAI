@@ -15,16 +15,15 @@ document.querySelectorAll(".menu li").forEach(function (item) {
   });
 });
 
-function ToggleMenu() {
-  console.log("Hiii");
-  const navigationMenu = document.getElementById("navigationMenu");
-  const navigation = document.getElementById("navigation");
+const navigationMenu = document.getElementById("navigationMenu");
+const navigation = document.getElementById("navigation");
 
-  if (navigationMenu.style.right == "-100%") {
-    navigation.style.opacity = "1";
-    navigationMenu.style.right = "0";
-  } else {
-    navigation.style.opacity = "0";
-    navigationMenu.style.right = "-100%";
-  }
+function OpenMenu() {
+  navigation.style.opacity = "1";
+  navigationMenu.style.right = "0";
+}
+
+function CloseMenu() {
+  navigation.style.opacity = "0";
+  navigationMenu.style.right = "-100%";
 }
