@@ -263,7 +263,7 @@ header nav .container .menu li .dropdown li:hover a {
   position: relative;
 }
 
-.slide-show button {
+.slide-show .controllers {
   top: 0;
   height: 100%;
   padding: 0 30px;
@@ -276,7 +276,7 @@ header nav .container .menu li .dropdown li:hover a {
   cursor: pointer;
 }
 
-.slide-show button:hover {
+.slide-show .controllers:hover {
   opacity: 1;
 }
 
@@ -286,6 +286,27 @@ header nav .container .menu li .dropdown li:hover a {
 
 .slide-show .right {
   right: 0;
+}
+
+.slide-show .indicators {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-show .indicators button {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border: none;
 }
 
 .slide-show .image-box {
