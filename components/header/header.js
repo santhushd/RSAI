@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const footer = document.getElementById("footer");
-  const componentPath = footer.getAttribute("data-content");
-  const url = componentPath + "/header/header.html";
+  const currentPath = footer.getAttribute("data-content");
+  const url = (currentPath || "") + "components/header/header.html";
   fetch(url)
     .then((response) => {
       if (response.ok) {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Linking styles
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `${componentPath}/header/header.css`;
+      link.href = `${currentPath || ""}components/header/header.css`;
       document.head.appendChild(link);
 
       //   Get and display content
@@ -57,7 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Navigate to content tabs
       window.NavigateContent = function (page) {
-        window.location.href = `${window.location.origin}/pages/content/content.html?${page}`;
+        window.location.href = `${
+          currentPath || ""
+        }pages/content/content.html?${page}`;
       };
 
       // =================
