@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const url = window.location.href;
   const queryString = url.split("?")[1];
   const pageName = queryString || "default";
-  const fetchUrl = `${window.location.origin}/pages/articles/${pageName}/${pageName}.html`;
+  const fetchUrl = `../articles/${pageName}/${pageName}.html`;
 
   //   Get article area
   const articleArea = document.getElementById("articleArea");
