@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch(`${window.location.origin}/components/header/header.html`)
+  const tempath = `${window.location.origin}/components/header/header.html`;
+  fetch(tempath)
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -62,6 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // =================
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error, tempath);
     });
 });
