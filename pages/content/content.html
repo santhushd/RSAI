@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../root.css" />
+    <link rel="stylesheet" href="content.css" />
+    <script
+      src="https://kit.fontawesome.com/01f74f74c3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Page content -->
+    <div class="article-content">
+      <div class="container">
+        <div class="location-path">
+          <div class="icon"><i class="fa-solid fa-house"></i></div>
+          <div class="icon"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="icon">Sub Path</div>
+          <div class="icon"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="icon">Current Path</div>
+        </div>
+        <div class="articles">
+          <div class="menu">
+            <div class="title">Current Path</div>
+            <ul class="menu-items" id="contentMenuItems">
+              <li>
+                <a href="#">Section 01</a>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </li>
+              <li class="active">
+                <a href="#">Section 02</a>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </li>
+              <li>
+                <a href="#">Section 03</a>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </li>
+              <li>
+                <a href="#">Section 04</a>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </li>
+              <li>
+                <a href="#">Section 05</a>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </li>
+            </ul>
+          </div>
+          <div class="article" id="articleArea">I am an article</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+  <script src="content.js"></script>
+  <script src="../../components/header/header.js"></script>
+  <script src="../../components/footer/footer.js"></script>
+  <script src="../../root.js"></script>
+</html>

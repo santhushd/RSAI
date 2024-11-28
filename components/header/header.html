@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Header</title>
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <h1 class="title" id="siteTitle">
+            Workshop and International Research Conference 2025
+          </h1>
+          <div class="logos">
+            <img
+              style="display: none"
+              src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/rsai.jpeg"
+              alt="RSAI"
+              class="logo"
+            />
+            <img
+              style="display: none"
+              src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/prsc.png"
+              alt="PRSCO"
+              class="logo"
+            />
+          </div>
+          <button class="menu-button" onclick="OpenMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="navigation">
+        <div class="container" id="navigationMenu">
+          <ul class="menu">
+            <li class="home">
+              <a href="javascript:void(0)">Home</a>
+              <button onclick="CloseMenu()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Program</a>
+              <ul class="dropdown">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="NavigateContent('schedule-at-a-glance')"
+                    >Schedule at a Glance</a
+                  >
+                </li>
+                <li><a href="javascript:void(0)">Program Book</a></li>
+                <li><a href="javascript:void(0)">Keynote Speakers</a></li>
+                <li><a href="javascript:void(0)">Filed Excuser</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Call for Papers</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Key Dates</a></li>
+                <li><a href="javascript:void(0)">Submit Abstract</a></li>
+                <li><a href="javascript:void(0)">Submit Full Paper</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Registration</a>
+              <ul class="dropdown">
+                <li>
+                  <a href="javascript:void(0)">Registration Information</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Venue</a>
+              <ul class="dropdown">
+                <li>
+                  <a href="javascript:void(0)">Site &amp; Halls Overview</a>
+                </li>
+                <li><a href="javascript:void(0)">Accommodation</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Travel Info</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">Weather</a></li>
+                <li><a href="javascript:void(0)">Exchange Rate</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Organization/Info</a>
+              <ul class="dropdown">
+                <li><a href="javascript:void(0)">PRSCO</a></li>
+                <li><a href="javascript:void(0)">RSAI</a></li>
+                <li><a href="javascript:void(0)">Local Committee</a></li>
+                <li><a href="javascript:void(0)">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <script>
+      if (window.location === window.parent.location)
+        window.location.href = "/";
+    </script>
+  </body>
+</html>
