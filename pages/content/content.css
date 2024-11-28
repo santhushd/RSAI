@@ -24,9 +24,10 @@
 .article-content .container .articles {
   padding-top: 20px;
   width: 100%;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
-  column-gap: 30px;
+  column-gap: 20px;
   justify-content: space-between;
 }
 
@@ -97,4 +98,22 @@
 
 .article-content .container .articles .article {
   width: 75%;
+}
+
+@media screen and (max-width: 1080px) {
+  .article-content .container .articles .menu {
+    width: 36%;
+  }
+  .article-content .container .articles .article {
+    width: 64%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-content .container .articles .menu {
+    display: none;
+  }
+  .article-content .container .articles .article {
+    width: 100%;
+  }
 }

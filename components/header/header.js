@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Get element
   const footer = document.getElementById("footer");
+
+  // Get current path from the element
   const currentPath = footer.getAttribute("data-content");
+
+  // create url location for fetch element
   const url = (currentPath || "") + "components/header/header.html";
+
+  // Linking styles
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `${currentPath || ""}components/header/header.css`;
+  document.head.appendChild(link);
+
   fetch(url)
     .then((response) => {
       if (response.ok) {
@@ -15,12 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // =================
       // =================
 
-      // Linking styles
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = `${currentPath || ""}components/header/header.css`;
-      document.head.appendChild(link);
-
       //   Get and display content
       const header = document.getElementById("header");
       if (!header) return;
@@ -29,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //   Menu click events for mobile devices
       document.querySelectorAll(".menu li").forEach(function (item) {
         item.addEventListener("click", function (event) {
+          if (window.innerWidth > 1080) return;
           const dropdown = item.querySelector(".dropdown");
           event.preventDefault();
           if (!dropdown) return;
@@ -60,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = `${
           currentPath || ""
         }pages/content/content.html?${page}`;
+      };
+
+      window.ReloadHome = function () {
+        window.location.href = `${currentPath || ""}`;
       };
 
       // =================

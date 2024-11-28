@@ -33,7 +33,7 @@
         <div class="container" id="navigationMenu">
           <ul class="menu">
             <li class="home">
-              <a href="javascript:void(0)">Home</a>
+              <a href="javascript:void(0)" onclick="ReloadHome()">Home</a>
               <button onclick="CloseMenu()">
                 <i class="fa-solid fa-xmark"></i>
               </button>
@@ -41,22 +41,26 @@
             <li>
               <a href="javascript:void(0)">Program</a>
               <ul class="dropdown">
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    onclick="NavigateContent('schedule-at-a-glance')"
-                    >Schedule at a Glance</a
-                  >
+                <li onclick="NavigateContent('schedule-at-a-glance')">
+                  <a href="javascript:void(0)">Schedule at a Glance</a>
                 </li>
-                <li><a href="javascript:void(0)">Program Book</a></li>
-                <li><a href="javascript:void(0)">Keynote Speakers</a></li>
-                <li><a href="javascript:void(0)">Filed Excuser</a></li>
+                <li onclick="NavigateContent('program-book')">
+                  <a href="javascript:void(0)">Program Book</a>
+                </li>
+                <li onclick="NavigateContent('keynote-speakers')">
+                  <a href="javascript:void(0)">Keynote Speakers</a>
+                </li>
+                <li onclick="NavigateContent('filed-excuser')">
+                  <a href="javascript:void(0)">Filed Excuser</a>
+                </li>
               </ul>
             </li>
             <li>
               <a href="javascript:void(0)">Call for Papers</a>
               <ul class="dropdown">
-                <li><a href="javascript:void(0)">Key Dates</a></li>
+                <li onclick="NavigateContent('key-dates')">
+                  <a href="javascript:void(0)">Key Dates</a>
+                </li>
                 <li><a href="javascript:void(0)">Submit Abstract</a></li>
                 <li><a href="javascript:void(0)">Submit Full Paper</a></li>
               </ul>

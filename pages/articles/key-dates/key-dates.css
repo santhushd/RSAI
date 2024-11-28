@@ -1,0 +1,44 @@
+.key-dates-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.key-dates-data h1 {
+  font-size: 20px;
+}
+
+.key-dates-data .date-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  border-top: 2px solid #457b9d;
+}
+
+.key-dates-data .date-list .row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  justify-content: space-between;
+}
+
+.key-dates-data .date-list .row .date-col {
+  color: #1d3557;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  font-weight: 500;
+  font-size: 14px;
+  width: 300px;
+  background-color: #f2f2f6;
+}
+
+.key-dates-data .date-list .row .text-col {
+  padding: 0 18px;
+  width: 100%;
+  font-size: 14px;
+}
