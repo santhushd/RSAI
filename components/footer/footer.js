@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch(`${window.location.origin}/components/footer/footer.html`)
+  const footer = document.getElementById("footer");
+  const componentPath = footer.getAttribute("data-content");
+  const url = componentPath + "/footer/footer.html";
+  fetch(url)
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -12,14 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // =================
       // =================
 
-      //   Link styles
+      // Link styles
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `${window.location.origin}/components/footer/footer.css`;
+      link.href = `${componentPath}/footer/footer.css`;
       document.head.appendChild(link);
 
-      //   Get and display content
-      const footer = document.getElementById("footer");
+      // Display content
       if (!footer) return;
       footer.innerHTML = content;
 

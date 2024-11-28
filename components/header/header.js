@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const tempath = `${window.location.origin}/components/header/header.html`;
-  fetch(tempath)
+  const footer = document.getElementById("footer");
+  const componentPath = footer.getAttribute("data-content");
+  const url = componentPath + "/header/header.html";
+  fetch(url)
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Linking styles
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `${window.location.origin}/components/header/header.css`;
+      link.href = `${componentPath}/header/header.css`;
       document.head.appendChild(link);
 
       //   Get and display content
