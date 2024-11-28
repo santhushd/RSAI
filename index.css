@@ -173,6 +173,10 @@
   background-color: rgb(245, 245, 245);
 }
 
+.column-sections .container .col .row:hover button {
+  transform: translateX(-10px);
+}
+
 .column-sections .container .col .row h1 {
   font-size: 25px;
 }
@@ -285,6 +289,15 @@
   padding: 12px 0;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.button-blocks .container .col .block:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.button-blocks .container .col .block:hover button {
+  transform: translateX(-10px);
 }
 
 .button-blocks .container .col .block h1 {

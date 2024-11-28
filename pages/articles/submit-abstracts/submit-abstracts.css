@@ -1,0 +1,55 @@
+.abstracts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.abstracts h1 {
+  font-size: 20px;
+}
+
+.abstracts .table-view {
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid black;
+}
+
+.abstracts .table-view .col {
+  border: 1px solid black;
+  border-right: none;
+}
+
+.abstracts .table-view .col .row-title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 120px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.abstracts .table-view .col .row-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.abstracts .table-view .col .row-content li {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 5px 20px;
+  border-top: 1px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  .abstracts .table-view {
+    flex-direction: column;
+    row-gap: 20px;
+    border-right: none;
+  }
+  .abstracts .table-view .col {
+    border: 1px solid black;
+  }
+}

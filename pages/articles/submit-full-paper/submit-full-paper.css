@@ -1,0 +1,9 @@
+.full-paper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.full-paper h1 {
+  font-size: 20px;
+}
