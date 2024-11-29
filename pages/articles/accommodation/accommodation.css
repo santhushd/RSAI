@@ -1,0 +1,10 @@
+.accommodation-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.accommodation-container iframe {
+  width: 100%;
+  height: calc(100vh - 200px);
+}
