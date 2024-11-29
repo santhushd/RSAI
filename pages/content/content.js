@@ -19,7 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((content) => {
       //   Display content
       if (!articleArea) return;
-      articleArea.innerHTML = content;
+
+      // Create a temp div and get all the scripts inside content
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = content;
+      const scripts = tempDiv.querySelectorAll("script");
+      scripts.forEach((script) => {
+        const newScript = document.createElement("script");
+        if (script.src) {
+          newScript.src = script.src;
+        } else {
+          newScript.textContent = script.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
+
+      // Remove all script content and display the content
+      articleArea.innerHTML = tempDiv.innerHTML.replace(
+        /<script[\s\S]*?>[\s\S]*?<\/script>/gi,
+        ""
+      );
     })
     .catch((error) => {
       console.log(error);
