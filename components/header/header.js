@@ -32,13 +32,58 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!header) return;
       header.innerHTML = content;
 
-      //   Menu click events for mobile devices
-      document.querySelectorAll(".menu li").forEach(function (item) {
-        item.addEventListener("click", function (event) {
-          if (window.innerWidth > 1080) return;
+      // Fetch navigation data from json
+      fetch(`${currentPath || ""}data/navigation.json`)
+        .then((response) => response.json())
+        .then((navigation) => renderNavigationMenu(navigation))
+        .catch((error) =>
+          console.error("Error loading navigation data:", error)
+        );
+
+      // Render navigation
+      function renderNavigationMenu(navigationData) {
+        const navMenu = document.getElementById("navMenuList");
+        navigationData.forEach((nav) => {
+          const navItem = document.createElement("li");
+
+          if (nav.subNavigations.length === 0) {
+            // Single-level navigation (e.g., Home)
+            navItem.classList.add("home");
+            navItem.innerHTML = `
+              <a href="javascript:void(0)" onclick="ReloadHome()">Home</a>
+              <button onclick="CloseMenu()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            `;
+          } else {
+            // Multi-level navigation (e.g., Program)
+            navItem.innerHTML = `
+              <a href="javascript:void(0)">${nav.title}</a>
+              <ul class="dropdown">
+                ${nav.subNavigations
+                  .map(
+                    (subNav) => `
+                  <li onclick="NavigateContent('${subNav.url}&${nav.id}&${subNav.id}')">
+                    <a href="javascript:void(0)">${subNav.title}</a>
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+            `;
+          }
+          navMenu.appendChild(navItem);
+        });
+
+        navMenu.addEventListener("click", function (event) {
+          const item = event.target.closest("li");
+          if (!item) return;
+
           const dropdown = item.querySelector(".dropdown");
-          event.preventDefault();
           if (!dropdown) return;
+
+          event.preventDefault();
+
           if (dropdown.style.height === "0px" || dropdown.style.height === "") {
             const dropdownHeight = dropdown.scrollHeight;
             dropdown.style.height = dropdownHeight + "px";
@@ -48,7 +93,25 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdown.style.opacity = 1;
           }
         });
-      });
+      }
+
+      // //   Menu click events for mobile devices
+      // document.querySelectorAll(".menu li").forEach(function (item) {
+      //   item.addEventListener("click", function (event) {
+      //     if (window.innerWidth > 1080) return;
+      //     const dropdown = item.querySelector(".dropdown");
+      //     event.preventDefault();
+      //     if (!dropdown) return;
+      //     if (dropdown.style.height === "0px" || dropdown.style.height === "") {
+      //       const dropdownHeight = dropdown.scrollHeight;
+      //       dropdown.style.height = dropdownHeight + "px";
+      //       dropdown.style.opacity = 1;
+      //     } else {
+      //       dropdown.style.height = 0;
+      //       dropdown.style.opacity = 1;
+      //     }
+      //   });
+      // });
 
       //   Get and create open and close method for menu bar (mobile devices)
       const navigationMenu = document.getElementById("navigationMenu");

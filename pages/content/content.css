@@ -54,29 +54,42 @@
 .article-content .container .articles .menu .menu-items {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 0;
+  border-top: 1px solid rgb(231, 231, 231);
+  border-right: 5px solid #5a7296;
 }
 
 .article-content .container .articles .menu .menu-items .active {
-  border: 1px solid rgb(61, 61, 61);
+  /* border: 1px solid rgb(61, 61, 61); */
+  background-image: linear-gradient(to right, #394d6b, #5a7296);
+  border-bottom: none;
+  margin-right: 0;
 }
 
 .article-content .container .articles .menu .menu-items .active a {
   font-weight: 500;
-  color: rgb(59, 59, 59);
+  /* color: rgb(59, 59, 59); */
+  color: white;
+}
+
+.article-content .container .articles .menu .menu-items .active button {
+  display: none;
 }
 
 .article-content .container .articles .menu .menu-items .active:hover {
-  background-color: rgb(0, 0, 0, 0);
+  background-image: linear-gradient(to right, #5a7296, #5a7296);
 }
 
 .article-content .container .articles .menu .menu-items li {
   padding: 20px 20px;
-  border: 1px solid rgb(235, 235, 235);
+  /* border: 1px solid rgb(235, 235, 235); */
+  border-bottom: 1px solid rgb(235, 235, 235);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
+  /* margin-right: 10px; */
+  transition: 0.2s;
 }
 
 .article-content .container .articles .menu .menu-items li:hover {

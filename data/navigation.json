@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "title": "Home",
+    "url": "",
+    "subNavigations": []
+  },
+  {
+    "id": 1,
+    "title": "Program",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 1.1,
+        "title": "Schedule at a Glance",
+        "url": "schedule-at-a-glance"
+      },
+      {
+        "id": 1.2,
+        "title": "Program Book",
+        "url": "program-book"
+      },
+      {
+        "id": 1.3,
+        "title": "Keynote Speakers",
+        "url": "keynote-speakers"
+      },
+      {
+        "id": 1.4,
+        "title": "Filed Excuser",
+        "url": "filed-excuser"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Call for Papers",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 2.1,
+        "title": "Key Dates",
+        "url": "key-dates"
+      },
+      {
+        "id": 2.2,
+        "title": "Submit Abstract",
+        "url": "submit-abstracts"
+      },
+      {
+        "id": 2.3,
+        "title": "Submit Full Paper",
+        "url": "submit-full-paper"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Registration",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 3.1,
+        "title": "Registration Information",
+        "url": "registration-information"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Venue",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 4.1,
+        "title": "Site & Halls Overview",
+        "url": "site-n-hall-overview"
+      },
+      {
+        "id": 4.2,
+        "title": "Accommodation",
+        "url": "accommodation"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Travel Info",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 5.1,
+        "title": "Weather",
+        "url": "weather"
+      },
+      {
+        "id": 5.2,
+        "title": "Exchange Rate",
+        "url": "exchange-rate"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Organization/Info",
+    "url": "",
+    "subNavigations": [
+      {
+        "id": 6.1,
+        "title": "PRSCO",
+        "url": "prsco"
+      },
+      {
+        "id": 6.2,
+        "title": "RSAI",
+        "url": "rsai"
+      },
+      {
+        "id": 6.3,
+        "title": "Local Committee",
+        "url": "local-committee"
+      },
+      {
+        "id": 6.4,
+        "title": "Contact Us",
+        "url": "contact"
+      }
+    ]
+  }
+]

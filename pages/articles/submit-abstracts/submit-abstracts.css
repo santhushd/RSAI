@@ -4,10 +4,6 @@
   row-gap: 20px;
 }
 
-.abstracts h1 {
-  font-size: 20px;
-}
-
 .abstracts .table-view {
   display: flex;
   flex-direction: row;
