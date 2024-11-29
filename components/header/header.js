@@ -69,9 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }pages/content/content.html?${page}`;
       };
 
+      //Navigate/Reload home page
       window.ReloadHome = function () {
         window.location.href = `${currentPath || ""}`;
       };
+
+      // Set logo
+      document.getElementById("regionalLogo").src = `${
+        currentPath || ""
+      }components/header/regional.png`;
 
       // =================
       // =================
