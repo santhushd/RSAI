@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../articles/weather/weather.css" />
+  </head>
   <body>
-    <p>No content for weather</p>
+    <div class="weather-container">
+      <h3>Weather in Colombo</h3>
+      <p id="loading">Loading</p>
+      <div id="contentWeather" style="display: none">
+        <div class="details">
+          <!-- <p><strong>Country:</strong> Sri Lanka</p> -->
+          <p>
+            <strong>Condition:</strong> <span id="weather-description"></span>
+          </p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind Speed:</strong> <span id="wind-speed"></span> m/s</p>
+          <p><strong>Pressure:</strong> <span id="pressure"></span> hPa</p>
+          <p><strong>Visibility:</strong> <span id="visibility"></span> m</p>
+        </div>
+        <div class="image-box">
+          <div class="image">
+            <img id="weather-icon" alt="Weather icon" />
+          </div>
+          <p class="temperature" id="temperature"></p>
+        </div>
+      </div>
+    </div>
+    <script src="../articles/weather/weather.js"></script>
   </body>
 </html>

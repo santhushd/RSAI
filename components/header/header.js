@@ -50,11 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
             // Single-level navigation (e.g., Home)
             navItem.classList.add("home");
             navItem.innerHTML = `
-              <a href="javascript:void(0)" onclick="ReloadHome()">Home</a>
+              <a href="javascript:void(0)">Home</a>
               <button onclick="CloseMenu()">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             `;
+            navItem.addEventListener("click", function () {
+              ReloadHome();
+            });
           } else {
             // Multi-level navigation (e.g., Program)
             navItem.innerHTML = `

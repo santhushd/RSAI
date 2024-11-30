@@ -16,14 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let LoadedNavigationData;
 
-  // Load navigation sections
-  console.log(pageUrl, menuId, currentId);
-
   fetch(`../../data/navigation.json`)
     .then((response) => response.json())
     .then((navigation) => {
       LoadedNavigationData = navigation;
-      console.log(LoadedNavigationData);
+      // console.log(LoadedNavigationData);
       loadSubNavigationsByMainId(menuId);
     })
     .catch((error) => console.error("Error loading navigation data:", error));
@@ -36,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(`Main navigation with ID ${mainId} not found.`);
       return;
     }
+
+    // Set sub path
+    document.getElementById("subPath").textContent = mainNavItem.title;
+
     const subNavContainer = document.getElementById("subNavContainer");
     subNavContainer.innerHTML = "";
     if (mainNavItem.subNavigations.length > 0) {
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const subNavItem = document.createElement("li");
         subNavItem.classList.add("click-item");
         if (subNav.id == currentId) {
+          document.getElementById("currentPath").textContent = subNav.title;
           subNavItem.classList.add("active");
         }
         subNavItem.innerHTML = `
@@ -54,11 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const fetchUrl = `../articles/${pageName}/${pageName}.html`;
 
         subNavItem.addEventListener("click", function () {
-          document
-            .querySelectorAll(".menu-items .click-item")
-            .forEach((el) => el.classList.remove("active"));
+          // document
+          //   .querySelectorAll(".menu-items .click-item")
+          //   .forEach((el) => el.classList.remove("active"));
 
-          subNavItem.classList.add("active");
+          // subNavItem.classList.add("active");
+          currentId = subNav.id;
+          loadSubNavigationsByMainId(mainId);
           LoadArticle(fetchUrl);
         });
         subNavContainer.appendChild(subNavItem);
@@ -67,12 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
       subNavContainer.innerHTML = "<li>No sub-navigations available</li>";
     }
   }
-
-  //   Get article area
-  const articleArea = document.getElementById("articleArea");
 });
 
 window.LoadArticle = function (url) {
+  const articleArea = document.getElementById("articleArea");
+  // Del all dynamic scripts in sec rload
+  const existingScripts = document.querySelectorAll(
+    "script[data-dynamic='true']"
+  );
+  existingScripts.forEach((script) => script.remove());
+
   fetch(url)
     .then((response) => {
       if (response.ok) {
@@ -90,7 +98,15 @@ window.LoadArticle = function (url) {
       tempDiv.innerHTML = content;
       const scripts = tempDiv.querySelectorAll("script");
       scripts.forEach((script) => {
+        const existingScript = document.querySelector(
+          `script[src='${script.src}']`
+        );
+        if (existingScript) return;
+
+        // Create new script element and mark as dynamic
         const newScript = document.createElement("script");
+        newScript.setAttribute("data-dynamic", "true");
+        newScript.defer = true;
         if (script.src) {
           newScript.src = script.src;
         } else {
@@ -105,17 +121,17 @@ window.LoadArticle = function (url) {
         ""
       );
 
-      document.querySelectorAll(".menu-items .click-item").forEach((item) => {
-        item.addEventListener("click", () => {
-          // Remove 'active' class from all items
-          document
-            .querySelectorAll(".menu-items .click-item")
-            .forEach((el) => el.classList.remove("active"));
+      // document.querySelectorAll(".menu-items .click-item").forEach((item) => {
+      //   item.addEventListener("click", () => {
+      //     // Remove 'active' class from all items
+      //     document
+      //       .querySelectorAll(".menu-items .click-item")
+      //       .forEach((el) => el.classList.remove("active"));
 
-          // Add 'active' class to the clicked item
-          item.classList.add("active");
-        });
-      });
+      //     // Add 'active' class to the clicked item
+      //     item.classList.add("active");
+      //   });
+      // });
     })
     .catch((error) => {
       console.log(error);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Slideshow -->
+    <div class="slide-show">
+      <div class="image-container">
+        <div class="image-box slide-image" style="display: block">
+          <img
+            src="https://journal-home.s3.ap-northeast-2.amazonaws.com/site/prsc2024/im3e.jpg"
+            alt="Sample-Image-01"
+          />
+        </div>
+        <div class="image-box slide-image" style="display: none">
+          <img src="components/banner/banner.jpg" alt="Sample-Image-02" />
+        </div>
+        <div class="image-box slide-image" style="display: none">
+          <img src="components/banner/banner.jpg" alt="Sample-Image-03" />
+        </div>
+      </div>
+      <button class="left controllers" onclick="moveToImage(-1)">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button class="right controllers" onclick="moveToImage(1)">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+      <div class="indicators">
+        <button></button>
+        <div class="gap"></div>
+        <button></button>
+      </div>
+      <div class="container">
+        <div class="card">
+          <h1>Workshop and International Research Conference 2025</h1>
+          <hr />
+          <p>01, December, 2024</p>
+          <p>Colombo , Sri Lanka</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      if (window.location === window.parent.location)
+        window.location.href = "/";
+    </script>
+  </body>
+</html>

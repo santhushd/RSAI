@@ -1,0 +1,16 @@
+.exchange-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.exchange-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.exchange-container .rate-info {
+  font-size: 16px;
+  color: #5b77a0;
+}
